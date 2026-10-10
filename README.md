@@ -1,14 +1,33 @@
-# 🚀 HYBRID-MODEL-RAG-ASSISTANT | Project-8 | GenAI
+# 🚀 HYBRID-MODEL-RAG-ASSISTANT | Project-8 | Live RAG Chatbot
 
-> **Built by Ravi Teja | Day 61-67 | From CNN to RAG Chatbot**
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://mxaiaw9fjycwwiveyxpspj.streamlit.app/)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
+[![Groq](https://img.shields.io/badge/LLM-Groq%20gpt--oss--120b-orange)](https://groq.com/)
 
-Live Demo: `https://your-link-will-be-here.streamlit.app` (Add after deploy)
+### 🌐 Live Demo
+**👉 https://mxaiaw9fjycwwiveyxpspj.streamlit.app/**
 
-### 📌 Project Overview
-This is **Project-8**, extension of **Project-7 (Hybrid-YOLO-Custom-Model)**.
-Project-7 was only Computer Vision (CNN 93.36% + YOLOv8 + Hybrid 99.98%).
-Project-8 adds **GenAI - RAG Assistant** to chat with your Hybrid model documentation.
-
-Ask: "What is Hybrid accuracy?" -> FAISS searches docs -> Groq LLM answers!
+### 📌 About
+**Project-7 (Day 61-63):** Custom CNN 93.36% + YOLOv8n.pt + Hybrid 99.98%
+**Project-8 (Day 64-67):** This Repo - RAG Chatbot for Hybrid Model using FAISS + Groq + Streamlit
 
 ### 🏗️ Architecture
+User Question -> Keyword Retrieval (FAISS Concept) -> Top Docs -> Groq LLM (openai/gpt-oss-120b) -> Final Answer
+
+### 💻 Tech Stack
+- LLM: Groq API `openai/gpt-oss-120b`
+- Vector DB Concept: FAISS
+- Embeddings: all-MiniLM-L6-v2 (384-dim)
+- Frontend: Streamlit
+- Deployment: Streamlit Cloud
+
+### ✨ Features
+- Ask about Hybrid Model, Accuracy, YOLO, CNN
+- Blue Box = Retrieved Docs (RAG Retrieval)
+- Green Box = LLM Answer (RAG Generation)
+- Secured with Streamlit Secrets
+
+### 🚀 Run Locally
+```bash
+pip install -r requirements.txt
+streamlit run app.py
