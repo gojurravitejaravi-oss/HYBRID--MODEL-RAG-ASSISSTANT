@@ -41,7 +41,7 @@ if st.button("Get Answer"):
         try:
             client = Groq(api_key=groq_key)
             comp = client.chat.completions.create(
-                model="llama-3.1-8b-instant",
+                model="openai/gpt-oss-120b",
                 messages=[
                     {"role": "system", "content": f"You are RAG assistant. Answer ONLY from this context: {retrieved}. If not in context, say I don't know from docs."},
                     {"role": "user", "content": question}
